@@ -1,0 +1,130 @@
+.main {
+    margin: 0 auto;
+    width: 800px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.headerGradient {
+    width: calc(100% - 40px);
+    margin: 20px;
+    height: 150px;
+    background: rgb(17, 0, 84);
+    background: linear-gradient(90deg, rgba(17, 0, 84, 1) 0%, rgba(227, 190, 233, 1) 50%);
+    border-radius: 20px;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form,
+.promo {
+    /* height: 100px; */
+    width: calc((100% - 60px) / 2);
+}
+
+.form {
+    padding: 20px;
+    background-color: #f1dcf5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo {}
+
+.formHeader {
+    background-color: #110054;
+    color: aliceblue;
+    height: fit-content;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.headerFormText {
+    width: 240px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+input,
+select {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+label {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 3px;
+}
+
+.inlined {
+    display: inline
+}
+
+a {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 20px;
+}
+
+.bottom {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(228, 221, 221);
+    border-radius: 20px;
+    font-style: italic;
+}
+
+ul {
+    padding-top: 10px;
+}
+
+li {
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+input[type=submit] {
+    margin-top: 20px;
+    background: rgb(17, 0, 84);
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background: rgb(76, 69, 99);
+}
