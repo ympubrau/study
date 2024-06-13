@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "SterlingDisplay";
+    src: url('./fonts/SterlingDisplay\ Roman.ttf')
+}
+
+.main {
+    width: 800px;
+    margin: 0 auto;
+    height: 800px;
+    padding-top: 20px;
+}
+
+h1 {
+    font-family: SterlingDisplay;
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: 400;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+p {
+    font-family: SterlingDisplay;
+    font-style: normal;
+    font-size: 1.5vw;
+    font-weight: 400;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+ul {
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.promo {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.photoWrapper,
+.photoCommentsWrapper {
+    display: flex;
+    width: 390px;
+}
+
+button:last-of-type {
+    margin-top: auto;
+}
+
+.photoWrapper {
+    gap: 10px;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
+
+.hoverClick {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hoverClick:hover {
+    cursor: pointer;
+    box-shadow: 6px 6px teal;
+}
+
+.photoCommentsWrapper {
+    flex-direction: column;
+    height: 490px;
+}
+
+button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+button p {
+    font-weight: 600;
+    font-style: bold;
+}
+
+button:hover {
+    background-color: #81d8d0;
+    color: black;
+}
+
+li {
+    font-family: SterlingDisplay;
+    font-style: normal;
+    font-size: 1.3vw;
+    font-weight: 400;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+h2 {
+    font-family: SterlingDisplay;
+    font-style: normal;
+    font-size: 2vw;
+    font-weight: 400;
+    padding-top: 2px;
+    padding-bottom: 15px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-bottom: 40px;
+}
