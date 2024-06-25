@@ -9,7 +9,7 @@ let moves = 0
 let gameStarted = false
 let cardsAmount = 0
 let openedCards = []
-
+let animTime = '0.15s'
 timerText.innerText = '00:00'
 attemptsText.innerText = '0'
 
@@ -37,6 +37,7 @@ function setToQuestions() {
         iterator.src = 'img/10.png'
         iterator.removeEventListener('click', (evt) => performMove(evt, i))
         iterator.classList.ad
+        iterator.style.border = 'none'
     }
 }
 
@@ -67,10 +68,10 @@ function performMove(evt, i) {
     srcCard = evt.target
     if(!srcCard.classList.contains('opened') && openedCards.length != 2 && gameStarted) {
         srcCard.style.opacity = "0"
-        srcCard.style.transition = "0.25s"
+        srcCard.style.transition = animTime
         setTimeout(() => {
             srcCard.style.opacity = "1"
-            srcCard.style.transition = "0.25s"
+            srcCard.style.transition = animTime
             moves += 1
             attemptsText.innerText = moves
     
@@ -81,6 +82,11 @@ function performMove(evt, i) {
     
             if(openedCards.length == 2) {
                 if(openedCards[0].src == openedCards[1].src && openedCards[0] != openedCards[1]) {
+                    openedCards[0].style.border = '1px solid green'
+                    openedCards[0].style.borderRadius = '16px'
+                    openedCards[1].style.border = '1px solid green'
+                    openedCards[1].style.borderRadius = '16px'
+
                     openedCards = []
                     cardsAmount += 2
                     if(cardsAmount == 16) {
@@ -93,14 +99,14 @@ function performMove(evt, i) {
                 } else {
                     setTimeout(() => {
                         openedCards[0].style.opacity = "0"
-                        openedCards[0].style.transition = "0.25s"
+                        openedCards[0].style.transition = animTime
                         openedCards[1].style.opacity = "0"
-                        openedCards[1].style.transition = "0.25s"
+                        openedCards[1].style.transition = animTime
                         setTimeout(() => {
                             openedCards[0].style.opacity = "1"
-                            openedCards[0].style.transition = "0.25s"
+                            openedCards[0].style.transition = animTime
                             openedCards[1].style.opacity = "1"
-                            openedCards[1].style.transition = "0.25s"
+                            openedCards[1].style.transition = animTime
 
                             openedCards[0].src = 'img/10.png'
                             openedCards[1].src = 'img/10.png'
