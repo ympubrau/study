@@ -13,6 +13,9 @@ let animTime = '0.15s'
 timerText.innerText = '00:00'
 attemptsText.innerText = '0'
 
+for (let i = 0; i < cards.length; i += 1) {
+    cards[i].addEventListener('click', (evt) => performMove(evt, i))
+}
 
 function convertSecondstoTime(given_seconds) {
     minutes = Math.floor((given_seconds / 60));
@@ -35,8 +38,7 @@ function setToQuestions() {
     attemptsText.innerText = 0
     for (const iterator of cards) {
         iterator.src = 'img/10.png'
-        iterator.removeEventListener('click', (evt) => performMove(evt, i))
-        iterator.classList.ad
+        iterator.classList.remove('opened')
         iterator.style.border = 'none'
     }
 }
@@ -51,11 +53,7 @@ function startGame() {
         }, 1000)
 
         winArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-        winArray.sort(() => Math.random() - 0.5);
-
-        for (let i = 0; i < cards.length; i += 1) {
-            cards[i].addEventListener('click', (evt) => performMove(evt, i))
-        }
+        // winArray.sort(() => Math.random() - 0.5);
 
     } else {
         setToQuestions()
