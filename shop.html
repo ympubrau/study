@@ -9,42 +9,61 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="loader" hidden>
+        <div class="boxes" >
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="main" >
         <div class="promo">
             <div class="photoWrapper">
                 <img id="imageBox1" src="./images/mainEarrings.webp" width="390px" height="390px">
-                <img class="hoverClick" src="./images/mainEarrings.webp" width="90px" height="90px"
-                    onclick="galleryFunction1(this)">
-                <img class="hoverClick" src="./images/earrings_2.webp" width="90px" height="90px"
-                    onclick="galleryFunction1(this)">
-                <img class="hoverClick" src=" ./images/earrings_3.webp" width="90px" height="90px"
-                    onclick="galleryFunction1(this)">
-                <img class="hoverClick" src=" ./images/earrings_4.webp" width="90px" height="90px"
-                    onclick="galleryFunction1(this)">
-
             </div>
             <div class=" photoCommentsWrapper">
-                <h1>Olive Leaf Climber Earrings </h1>
-                <p>
+                <h1 id="mainName">Olive Leaf Climber Earrings </h1>
+                <p id="mainDesc">
                     The daughter of artist Pablo Picasso and painter Françoise Gilot, Paloma Picasso has creativity in
                     her DNA. The designer's collection for Tiffany is inspired by her travels and surroundings,
                     including everything from New York graffiti to the natural world. Retails for 450 EUR. 20 mm in
                     length.
                 </p>
                 <ul>
-                    <li>Sterling silver</li>
-                    <li>Original designs copyrighted by Paloma Picasso</li>
-                    <li>Product number: 60702519</li>
+                    <li id="cals">Sterling silver</li>
+                    <li id="otherCals">Original designs copyrighted by Paloma Picasso</li>
                 </ul>
 
-                <button>
-                    <p>Add to Bag</p>
-                    <p>&#8364 450</p>
+                <button >
+                    <p id="Buy">Add to cart</p>
+                    <p id="price">&#8364 450</p>
                 </button>
             </div>
         </div>
         <div class="additional">
-            <h2>You may also like:</h2>
+            <h2 id="Rec">You may also like:</h2>
             <div class="items">
                 <div class="item">
                     <img src="./images/alsoLike1.webp" width="250px" height="250px">
@@ -79,11 +98,8 @@
     </div>
 </body>
 
-<script>
-    function galleryFunction1(smallImg) {
-        let fullImg = document.getElementById('imageBox1');
-        fullImg.src = smallImg.src;
-    }
-</script>
+<script src="script.js"></script>
+
+
 
 </html>
